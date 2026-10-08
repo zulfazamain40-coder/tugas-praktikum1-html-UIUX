@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Kelompok 20 Desain UI/UX</title>
+
+    <style>
+      /* 1. RESET & DASAR TAMPILAN PAGE */
+      * {
+        box-sizing: border-box; /* Agar padding dan border tidak menambah ukuran elemen */
+        margin: 0; /* Menghapus jarak luar bawaan browser */
+        padding: 0; /* Menghapus jarak dalam bawaan browser */
+        font-family:
+          Arial, sans-serif; /* Mengatur jenis font seluruh halaman */
+      }
+
+      body {
+        background-color: #f5f5f5; /* Warna latar belakang halaman */
+        color: #333; /* Warna teks utama */
+        padding: 20px; /* Jarak dari tepi layar */
+      }
+
+      /* 2. PEMBUNGKUS UTAMA (CONTAINER) */
+      .container {
+        max-width: 1000px; /* Batas lebar maksimal halaman */
+        margin: 0 auto; /* Mengatur posisi konten di tengah layar */
+      }
+
+      /* 3. BAGIAN HEADER (ATAS) */
+      .main-header {
+        text-align: center; /* Teks di header rata tengah */
+        margin-bottom: 30px; /* Jarak ke bagian bawah */
+      }
+
+      .logo {
+        font-size: 40px; /* Ukuran ikon logo */
+        margin-bottom: 5px;
+      }
+
+      .main-header h1 {
+        font-size: 24px; /* Ukuran judul */
+        margin-bottom: 5px;
+      }
+
+      .main-header p {
+        color: #666; /* Warna teks subjudul lebih pudar */
+        font-size: 14px;
+      }
+
+      /* 4. BAGIAN INTRO */
+      .intro-box {
+        display: flex; /* Menjajarkan ikon dan teks ke samping */
+        align-items: center; /* Posisi vertikal di tengah */
+        background-color: #e0e0e0;
+        border: 1px solid #ccc;
+        border-radius: 8px; /* Sudut membulat */
+        padding: 15px;
+        margin-bottom: 20px;
+      }
+
+      .intro-icon {
+        font-size: 24px;
+        margin-right: 15px;
+      }
+
+      /* 5. TATA LETAK KARTU ANGGOTA (GRID REFRESH) */
+      .members-grid {
+        display: grid;
+        /* Menyesuaikan grid agar rapi saat jumlah kartu ganjil (5 kartu) */
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px; /* Jarak antar kartu */
+      }
+
+      /* 6. DESAIN KARTU ANGGOTA (CARD) */
+      .card {
+        background-color: #e0e0e0;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+      }
+
+      /* Bagian Atas Kartu (Nama & Badge) */
+      .card-header {
+        display: flex;
+        justify-content: space-between; /* Nama di kiri, badge di kanan */
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .badge {
+        background-color: #ccc;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+      }
+      .profile-img {
+        width: 100px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 4px;
+        flex-shrink: 0;
+      }
+
+      /* Bagian Isi Kartu (Foto & Detail) */
+      .card-body {
+        display: flex; /* Menyusun foto dan list secara berdampingan */
+        gap: 15px;
+      }
+
+      /* Tempat Foto */
+      .photo-placeholder {
+        width: 100px;
+        height: 120px;
+        background-color: #ccc;
+        border: 1px solid #bbb;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        flex-shrink: 0;
+      }
+
+      /* List Identitas Anggota */
+      .card-body ul {
+        list-style: none; /* Menghilangkan tanda titik (bullet) */
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      /* 7. BAGIAN FOOTER */
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        padding: 10px;
+        background-color: #e0e0e0;
+        border-radius: 5px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER -->
+      <header class="main-header">
+        <div class="logo">👥</div>
+        <h1>Kelompok 20</h1>
+        <p>Desain UI/UX & Pemrograman Web</p>
+      </header>
+
+      <main>
+        <!-- INTRO -->
+        <section class="intro-box">
+          <div class="intro-icon">👥</div>
+          <div class="intro-text">
+            <h2>kelompok 20</h2>
+            <p>praktikum bikin website kelompk</p>
+          </div>
+        </section>
+
+        <!-- DAFTAR 5 ANGGOTA KELOMPOK -->
+        <section class="members-grid">
+          <!-- ANGGOTA 1 -->
+          <article class="card">
+            <div class="card-header">
+              <h3>Biodata Anggota 1</h3>
+            </div>
+            <div class="card-body">
+              <img
+                
+                src="assets/img/foto zulfa.jpeg" class="profile-img"
+                alt="foto zulfa"
+              />
+              <ul>
+                <li><strong>Nama: </strong>Zulfa Zamain</li>
+                <li><strong>NIM:</strong> 0110226002</li>
+                <li><strong>Prodi:</strong> Teknik Informatika</li>
+                <li><strong>Hobi:</strong> banyak</li>
+                <li><strong>Funfact:</strong> Anak ke-9 dari 13 Bersaudara</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ANGGOTA 2 -->
+          <article class="card">
+            <div class="card-header">
+              <h3>Biodata Anggota 2</h3>
+            </div>
+            <div class="card-body">
+              <img class="profile-img" src="assets/img/foto zikel.jpeg" alt="foto zikel" />
+              <ul>
+                <li><strong>Nama:</strong> Ziqel Azka Hartono</li>
+                <li><strong>NIM:</strong> 0110226007</li>
+                <li><strong>Prodi:</strong> Teknik Informatika</li>
+                <li><strong>Hobi:</strong> Baca Manhwa</li>
+                <li>
+                  <strong>Funfact:</strong> Baru Pertama Kali Pakai Instagram
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ANGGOTA 3 -->
+          <article class="card">
+            <div class="card-header">
+              <h3>Biodata Anggota 3</h3>
+            </div>
+            <div class="card-body">
+              <img class="profile-img" src="assets/img/foto yuga.jpeg" alt="foto yuga" />
+              <ul>
+                <li><strong>Nama:</strong> Yuga Indra Syahputra</li>
+                <li><strong>NIM:</strong> 011022611</li>
+                <li><strong>prodi:</strong> Teknik Informatika</li>
+                <li><strong>Hobi:</strong> futsal</li>
+                <li><strong>Funfact:</strong> Kalo Gabut Suka Ngemil</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ANGGOTA 4 -->
+          <article class="card">
+            <div class="card-header">
+              <h3>Biodata Anggota 4</h3>
+            </div>
+            <div class="card-body">
+              <img class="profile-img" src="assets/img/foto wahyu.jpeg" alt="foto wahyu" />
+              <ul>
+                <li><strong>Nama:</strong> Wahyu Surya Pratama</li>
+                <li><strong>NIM:</strong> 0110226058</li>
+                <li><strong>prodi:</strong> Teknik Informatika</li>
+                <li><strong>Hobi:</strong> Badminton</li>
+                <li><strong>Funfact:</strong> Soft Spoken</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- ANGGOTA 5  -->
+          <article class="card">
+            <div class="card-header">
+              <h3>Biodata Anggota 5</h3>
+            </div>
+            <div class="card-body">
+              <img class="profile-img" src="assets/img/foto syauki.jpeg" alt="foto syauki" />
+              <ul>
+                <li><strong>Nama:</strong> Zulfikar Syauki Nur</li>
+                <li><strong>NIM:</strong> 0110226033</li>
+                <li><strong>prodi:</strong> Teknik Informatika</li>
+                <li><strong>Hobi:</strong> Batminton</li>
+                <li>
+                  <strong>Funfact:</strong> Tau jalan,, Tapi gatau nama nya
+                </li>
+              </ul>
+            </div>
+          </article>
+          <!-- ANGGOTA 6  -->
+          <article class="card">
+            <div class="card-header">
+              <h3>Biodata Anggota</h3>
+            </div>
+            <div class="card-body">
+              <img class="profile-img" src="assets/img/foto akbar.jpeg" alt="foto akbar" />
+              <ul>
+                <li><strong>Nama:</strong> Ziyad Akbar Fashani</li>
+                <li><strong>NIM:</strong> 0110226115</li>
+                <li><strong>prodi:</strong> Teknik Informatika</li>
+                <li><strong>Hobi:</strong> Basket</li>
+                <li><strong>Funfact:</strong> Suka Pedes</li>
+              </ul>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      
+      </footer>
+    </div>
+  </body>
+</html>
